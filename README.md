@@ -149,13 +149,13 @@ This repository features several R and Python scripts following YouTube tutorial
 
 Different tutorials:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Logistic Regression in R
+StatQuest Logistic Regression in R
 
-Classification Trees in Python from Start to Finish
+StatQuest Classification Trees in Python from Start to Finish
 
-ROC and AUC in R
+StatQuest ROC and AUC in R
 
-Ridge, Lasso and Elastic-Net Regression in R
+StatQuest Ridge, Lasso and Elastic-Net Regression in R
 
 StatQuest MDS and PCoA in R
 
@@ -164,3 +164,65 @@ StatQuest PCA in Python
 StatQuest PCA in R
 
 heart_disease_probabilities
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+# CS 546 Networks in Computational Biology
+This repository features and Python scripts for the Networks in Computational Biology Course
+
+**Descriptions of different assigments:**
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+**Homework Assignment 1 - metabolic network analysis**
+
+Overview: 
+In this homework assignment you will write a notebook (Google Colab or Jupyter) to analyze a large human metabolic reaction network derived from the HumanCyc (humancyc.orgLinks to an external site.) database. You will get this network from a data file in edge-list format. You can use any programming language and any network analysis toolbox that you like (or no network analysis toolbox, if you prefer). I recommend using python and igraph, and there is a template notebookLinks to an external site. [Google Colab] available that provides hints that are tailored to a python-igraph implementation.
+
+You have four problems to solve, each involving some analysis of the graph described by the edge-list file hsmetnet.txt.
+
+1. In this graph, each vertex is either a metabolite or a reaction. Each edge is an association of a metabolite with a reaction. How many distinct metabolites are there in the graph? How many reactions? How many edges are there? Calculate the degree 
+ of each of the metabolite vertices (you don’t need to calculate the degree for the vertices that correspond to reactions). What are the top six metabolites in terms of vertex degree in the graph?  (You can assume that no metabolite name has "REACTION" as a substring).
+
+2. Plot the distribution of the degrees of all the metabolite vertices, on log-log scale. Is the degree distribution well-described by a power law? Calculate the exponent 
+of the best-fit power-law.  How does the  that you get compare to the estimate of the power-law exponent reported by Jeong et al. in their 2000 article in Nature, “The large-scale organization of metabolic networks” (vol. 407, pp. 651–654) (see page 14 of reading-for-class-06.pdf)? (Note: there are two exponents referred to in the caption for Figure 2 and in the accompanying article text;  and They have the same value in the metabolic network, and thus, you can compare your value to either of them.) Based on structure of the network that you analyzed (bipartite, containing reactions) vs. the structure of the network that they analyzed (network projected to a network containing only metabolites), is it appropriate to compare the exponents? Why or why not?
+
+3. Calculate the shortest-path-length between all pairs of metabolites (vertices) in the graph, treating the graph as if it were undirected. Using the all-pairs distances that you just obtained, calculate the average for all pairs of metabolites in the giant (weakly connected) component of the network, by throwing away any distance value if it is infinite or zero. (Note: in calculating your average, do not include pairs of vertices that are the same vertex as both source and destination, which would have a distance of zero). Also using the all-pairs distances that you previously obtained, calculate the maximum  (throwing away infinite values, as before) in the giant (weakly connected) component of the network (i.e., you are calculating the diameter of the giant component, according to Newman's definition of diameter). Why are the average geodesic distances that we get, roughly twice those reported in Fig. 3b of Jeong et al., 2000?
+
+4. Calculate the shortest-paths betweenness centrality for all metabolites in the directed network. Plot the scatter plot of betweenness centrality (normalized to, i.e., divided by, M2, where M is the total number of metabolites) vs. vertex degree (here, "degree" means in-degree plus out-degree) for all metabolites, on log-log scale. Among metabolites with degree what metabolite has highest betweenness centrality in the network? Search on this metabolite in the HumanCyc database at humancyc.orgLinks to an external site., using the "Quick Search" box. Click on the hyperlinked metabolite that is displayed on the search results page. Click on the "reactions" tab, in the tabbed window in the lower part of the page. What important metabolic cycles is this metabolite involved in? Click on the "urea cycle". What is the known consequence of absence of an enzyme in this pathway?
+
+**Homework Assignment 2 - network motif analysis**
+
+Overview: 
+In this homework assignment you will analyze a bacterial gene regulatory network to from the standpoint of network motifs.  The network (which is a tab-delimited text file in edge-list format that is available in the class S3 bucket via HTTPSLinks to an external site. ) that you will analyze is a literature-curated list of transcription-factor–to–target-gene interactions in the model bacterial species, E. coli. I recommend using python and igraph, and there is a template notebookLinks to an external site. [Google Colab] available that provides hints that are tailored to a python-igraph implementation.
+
+1. There are 13 different types of connected 3-vertex motifs (“isomorphism classes”) for a digraph. Which one of these motifs is most frequent in the E. coli regulatory network?
+
+2. Which one of these motifs has a count of 47 in the regulatory network? I’ll refer to this specific motif as the “mystery motif”, or MM.  This is the motif that Shen-Orr et al. are claiming is enriched in the metabolic network. Let's assess the enrichment significance ourselves. To do so,  the counts of the MM needs to be computed for each network within an ensemble of random networks. Follow the approach used in Shen-Orr et al., which is to take the network and to shuffle the associations between source and target vertices while preserving the in- and out- degree of each vertex (and while avoiding creating self-loops in the shuffling; igraph users, see the rewire method). For each rewired graph, calculate the count of the MM in the corresponding digraph, and save it. Do this 1,000 times, and you will now have a vector of 1,000 MM count values from shuffled networks, and a single MM count value from the real network. What are the mean and standard deviation of the MM counts for the 1,000 random networks?
+
+3. What is the Z-score for enrichment of the MM count for the real network vs. the ensemble of random networks?  Does this Z-score correspond to a statistically significant positive enrichment?
+
+4. What is the ratio of the MM count for the real network to the average MM count for the random networks?
+
+5. How does ratio compare to the same ratio for the data in Table 1 in Shen-Orr et al., Nature Genetics, 2002?
+
+6. Given the modest ratio of the MM frequency in the real network vs. randomly shuffled network, should we entertain the possibility that the high frequency of MMs in the real network could be a consequence of the degree distribution rather than evolution specifically “favoring” FFLs as a building block for gene regulatory networks?
+
+**Homework Assignment 3 - max flow / min cuts**
+
+Overview: 
+For this homework, you will be asked to analyze a couple of networks from the standpoint of maximum flow / minimum cuts. I recommend using python and igraph, and there is a template notebookLinks to an external site. [Google Colab] available that provides hints that are tailored to a python-igraph implementation.
+
+Part 1:
+In the following digraph, what edge has maximum flow value as defined in Newman Section 6.12?  What is the value of the maximum flow for that edge? (Yes, I know that one can solve this by inspection; but here you are being asked to write code to solve it).
+
+A directed graph with six vertices: D->E, E->X, A->X, A->E, C->X, A->C, A->B
+
+CS546 students: How one would do it using a functional programming style, without a "for loop"?  (Hint, list comprehension is not considered a "for loop" here, even though it uses the keyword "for"). You can show code or if you have an idea but are not quite sure of the correct syntax, you can describe your idea in words.
+
+Part 2:
+In the human metabolic network, what is the maximum flow between "alpha-D-glucose" and "pyruvate"? Why do you think that this pair of vertices has such a high maximum flow?
+
+**Final Project Notebook**
+
+Overview: 
+For your CS446/546 final project, your team will prepare and submit a Google Colab notebook or Jupyter notebook (as an ".ipynb" file) documenting a computational biology project that you carry out. Your final project should involve analyzing some kind of biological network or a biological data-set from a network standpoint; but within that overall requirement, there is a broad range of possibilities. Your project could be to learn a network structure from measurement data; cluster an existing biological network to identify functional modules; analyze one or more centralities vs. vertex degree for a given biological network; etc. Your project should have a specific question that you pose, that you answer by carrying out a computational analysis. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------      
