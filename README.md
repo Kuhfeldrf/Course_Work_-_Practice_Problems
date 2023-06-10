@@ -97,3 +97,70 @@ Descriptions of different assigments:
       Invalid entry.    
       
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+# Applied Machine Learning
+This repository features several pythons scripts written for the Computer Science Applied Machine Learning course at Orgon State
+
+Descriptions of different assigments:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Notebook 2: Data Exploration, Preprocessing & Similarity Metrics**   
+      Define pandas, DataFrame and Series. (MLO 5)
+      Demonstrate the ability to find and add a dataset to a Notebook, and load the data into a pandas DataFrame. (MLO 5)
+      Characterize a data set using the pandas API. (MLO 5)
+      Visualize data using pandas and MatPlotLib. (MLO 5)
+      Demonstrate handling missing data within a data set using the pandas API. (MLO 5)
+      Synthesize new features from a data set with the pandas API. (MLO 5)
+ 
+ **Notebook 3: Classification with k-Nearest Neighbors**
+      Iteratively experiment and test a classifier with different values of k. (MLOs 2, 3, & 5)
+      Select an appropriate value for k after analyzing classification errors. (MLOs 3 & 5)
+      Engage in an ML classification process to solve a classification problem. (MLOs 2 & 5)
+      Apply the scikit-learn KNeighborsClassifier to predict class labels from a real data set. (MLOs 2 & 5)
+      
+**Week 4: Classification with Perceptrons**      
+      Implement a test procedure for a perceptron classifier. (MLOs 1 - 4)
+      Analyze the accuracy of a perceptron classifier. (MLOs 3 & 4)
+      Engage in an ML classification process to solve a classification problem. (MLOs 2 & 4)
+      Apply the scikit-learn Perceptron to predict class labels from a real data set. (MLOs 2 & 4)
+
+**Notebook 6: Predicting Housing Prices with Linear Regression**
+      Implement a training procedure for a multiple linear regression model. (MLOs 2 - 4)
+      Engage in an ML supervised learning process to solve a regression problem. (MLOs 3 - 5)
+      Analyze the accuracy of a linear regression model. (MLOs 4 & 5)
+      Apply the scikit-learn SGDRegressor to predict values based on training examples in a real data set. (MLOs 1 & 5)
+
+**Notebook 7: Classification with Logistic Regression**
+      Implement a training procedure for a logistic regression classifier. (MLOs 2 - 4)
+      Narrate an ML supervised learning process to solve a classification problem. (MLOs 3 & 4)
+      Analyze the accuracy of a logistic regression model. (MLOs 3 & 4)
+      Apply the scikit-learn LogisticRegression model to predict class labels based on training examples in a real data set. (MLO 4)
+
+**Notebook 8: Classification with Support Vector Machines**
+      Engage in an ML classification process to solve a classification problem. (MLOs 2 - 4)
+      Apply the scikit-learn SVC to predict class labels from a real data set. (MLOs 2 - 4)
+      Analyze the accuracy of an SVM classifier. (MLOs 3 & 4)
+
+**Notebook 9: Text Classification & Sentiment Analysis**
+      Demonstrate a machine learning process and workflow in a Jupyter Notebook. (MLOs 2 - 4)
+      Apply a classification model to perform sentiment analysis with a real data set. (MLOs 2 - 4)
+      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+# Stats Quest YouTube Tutorial
+This repository features several R and Python scripts following YouTube tutorials
+
+Different tutorials:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Logistic Regression in R
+
+Classification Trees in Python from Start to Finish
+
+ROC and AUC in R
+
+Ridge, Lasso and Elastic-Net Regression in R
+
+StatQuest MDS and PCoA in R
+
+StatQuest PCA in Python
+
+StatQuest PCA in R
+
+heart_disease_probabilities
