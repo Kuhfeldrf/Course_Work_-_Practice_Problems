@@ -96,7 +96,8 @@ Descriptions of different assigments:
       Otherwise, print: 
       Invalid entry.    
       
------------------------------------------------------------------------------------------------------------------------------------------------------------------------      # Applied Machine Learning
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+# Applied Machine Learning
 This repository features several pythons scripts written for the Computer Science Applied Machine Learning course at Orgon State
 
 Descriptions of different assigments:
@@ -142,16 +143,24 @@ Descriptions of different assigments:
       Demonstrate a machine learning process and workflow in a Jupyter Notebook. (MLOs 2 - 4)
       Apply a classification model to perform sentiment analysis with a real data set. (MLOs 2 - 4)
       
------------------------------------------------------------------------------------------------------------------------------------------------------------------------      # Stats Quest YouTube Tutorial
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+# Stats Quest YouTube Tutorial
 This repository features several R and Python scripts following YouTube tutorials
 
 Different tutorials:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Logistic Regression in R
+
 Classification Trees in Python from Start to Finish
+
 ROC and AUC in R
+
 Ridge, Lasso and Elastic-Net Regression in R
+
 StatQuest MDS and PCoA in R
+
 StatQuest PCA in Python
+
 StatQuest PCA in R
+
 heart_disease_probabilities
